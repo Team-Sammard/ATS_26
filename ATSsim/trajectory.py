@@ -22,7 +22,7 @@ env.set_atmospheric_model(
 #ROCKET:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Cesaroni_M1670 = SolidMotor(
-    thrust_source=r"C:\Users\sengu\OneDrive\Desktop\Rehaan\Sammard\ATSsim\Cesaroni_M1670.eng",
+    thrust_source=r"Cesaroni_M1670.eng",
     dry_mass=1.815,
     dry_inertia=(0.125, 0.125, 0.002),
     nozzle_radius=33 / 1000,
@@ -44,8 +44,8 @@ calisto = Rocket(
     radius=127 / 2000,
     mass=14.426,
     inertia=(6.321, 6.321, 0.034),
-    power_off_drag=r"C:\Users\sengu\OneDrive\Desktop\Rehaan\Sammard\ATSsim\powerOffCurveDrag.csv",
-    power_on_drag=r"C:\Users\sengu\OneDrive\Desktop\Rehaan\Sammard\ATSsim\powerOnCurveDrag.csv",
+    power_off_drag=r"powerOffCurveDrag.csv",
+    power_on_drag=r"powerOnCurveDrag.csv",
     center_of_mass_without_motor=0,
     coordinate_system_orientation="tail_to_nose",
 )
@@ -87,7 +87,7 @@ fin_set = calisto.add_trapezoidal_fins(
     span=0.110,
     position=-1.04956,
     cant_angle=0.5,
-    airfoil=(r"C:\Users\sengu\OneDrive\Desktop\Rehaan\Sammard\ATSsim\radians.csv","radians"),
+    airfoil=(r"radians.csv","radians"),
 )
 
 tail = calisto.add_tail(
